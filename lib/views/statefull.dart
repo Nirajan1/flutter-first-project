@@ -9,7 +9,6 @@ class StateLessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
         appBar: AppBar(
           title: const Center(
             child: Text("State Full Widget"),

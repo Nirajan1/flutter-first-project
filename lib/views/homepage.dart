@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/views/about.dart';
 import 'package:flutter_application_1/views/statefull.dart';
+import 'package:flutter_application_1/widgets/custom_card.dart';
+import 'package:flutter_application_1/widgets/drawer.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,15 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(
-          child: ListTile(
-            leading: Icon(Icons.home),
-            title: Text("Home"),
-          ),
-        ),
+        drawer: const MyDrawer(),
         appBar: AppBar(
           title: const Center(
-            child: Text("First Appbar"),
+            child: Text("Home Page"),
           ),
         ),
         body: SingleChildScrollView(
@@ -91,27 +88,14 @@ class HomePage extends StatelessWidget {
               const Center(
                 child: Text("Click on above button and get to the next page"),
               ),
+              // spacecreated
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.remove_circle,
-                      size: 30,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.add_circle,
-                      size: 30,
-                    ),
-                  ),
-                ],
-              ),
+              //   card widget
+              const CustomCard(),
+              const CustomCard(),
+              const CustomCard(),
             ],
           ),
         ),

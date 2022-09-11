@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/custom_card.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -7,15 +8,19 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
         appBar: AppBar(
-          title: const Text("About Page"),
+          title: const Center(
+            child: Text('About page'),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
               Image.asset('images/2.png'),
-           
+              const SizedBox(
+                height: 10,
+              ),
+              const CustomCard(),
             ],
           ),
         ),
